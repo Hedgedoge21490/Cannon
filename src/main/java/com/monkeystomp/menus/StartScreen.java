@@ -5,13 +5,11 @@
  */
 package main.java.com.monkeystomp.menus;
 
-import main.java.com.monkeystomp.controls.ToolBar;
 import main.java.com.monkeystomp.graphics.Display;
 import main.java.com.monkeystomp.graphics.Screen;
 import main.java.com.monkeystomp.graphics.Sprite;
 import main.java.com.monkeystomp.level.Level;
 import main.java.com.monkeystomp.menus.buttons.ClickableButton;
-import java.util.ArrayList;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;

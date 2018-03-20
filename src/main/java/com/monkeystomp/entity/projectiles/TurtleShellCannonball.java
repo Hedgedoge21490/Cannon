@@ -5,7 +5,6 @@
  */
 package main.java.com.monkeystomp.entity.projectiles;
 
-import main.java.com.monkeystomp.graphics.Screen;
 import main.java.com.monkeystomp.graphics.Sprite;
 
 /**

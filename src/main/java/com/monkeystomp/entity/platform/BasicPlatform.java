@@ -11,7 +11,9 @@ import main.java.com.monkeystomp.graphics.Sprite;
  *
  * @author Aaron
  */
-class BasicPlatform extends Platform {
+public class BasicPlatform extends Platform {
+
+    public static Platform globalBasicPlatform = new BasicPlatform();
 
     public BasicPlatform() {
         x = 0;

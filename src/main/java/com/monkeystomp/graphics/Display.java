@@ -10,6 +10,7 @@ import main.java.com.monkeystomp.entity.cannon.Cannon;
 import main.java.com.monkeystomp.controls.Keyboard;
 import main.java.com.monkeystomp.controls.Mouse;
 import main.java.com.monkeystomp.controls.ToolBar;
+import main.java.com.monkeystomp.entity.platform.BasicPlatform;
 import main.java.com.monkeystomp.level.GrassLevel;
 import main.java.com.monkeystomp.menus.PauseWindow;
 import main.java.com.monkeystomp.entity.platform.Platform;
@@ -265,7 +266,7 @@ public class Display extends Canvas implements Runnable {
                 startScreen.update();
                 if (startScreen.startGame) {
                     changeLevel(GrassLevel.globalGrassLevel);
-                    initGame(BasicCannon.globalBasicCannon, Platform.basicPlatform);
+                    initGame(BasicCannon.globalBasicCannon, BasicPlatform.globalBasicPlatform);
                     gameState = GAME_RUNNING;
                 }
                 break;

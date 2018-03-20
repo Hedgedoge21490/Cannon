@@ -6,12 +6,6 @@
 package main.java.com.monkeystomp;
 
 import main.java.com.monkeystomp.graphics.Display;
-import java.awt.Cursor;
-import java.awt.Point;
-import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
 /**
