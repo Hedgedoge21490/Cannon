@@ -7,14 +7,10 @@ package main.java.com.monkeystomp.level;
 
 import main.java.com.monkeystomp.controls.Mouse;
 import main.java.com.monkeystomp.entity.projectiles.Projectile;
-import main.java.com.monkeystomp.graphics.Display;
 import main.java.com.monkeystomp.graphics.Screen;
 import main.java.com.monkeystomp.graphics.Sprite;
-import java.io.IOException;
 import java.util.ArrayList;
-import javax.imageio.ImageIO;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
+
 
 /**
  *
@@ -29,47 +25,13 @@ class PurpleLevel extends Level {
     }
     
     @Override
-    protected void loadLevel(String path) {
-        try {
-            levelBackgroundImage = ImageIO.read(Level.class.getResource(path));
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-            System.err.println("Level could not load background image!");
-        }
-        try {
-            AudioInputStream ais = AudioSystem.getAudioInputStream(Level.class.getResource("/audio/songs/sousa-semperfidelis.wav"));
-            backgroundMusic = AudioSystem.getClip();
-            backgroundMusic.open(ais);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    
-    @Override
     protected void generateLevel() {
         int[] pixels = new int[levelBackgroundImage.getWidth() * levelBackgroundImage.getHeight()];
         levelBackgroundImage.getRGB(0, 0, levelBackgroundImage.getWidth(), levelBackgroundImage.getHeight(), pixels, 0, levelBackgroundImage.getWidth());
         levelBackgroundSprite = new Sprite(0, 50, pixels, levelBackgroundImage.getWidth(), levelBackgroundImage.getHeight());
         //backgroundMusic.loop(Clip.LOOP_CONTINUOUSLY);
     }
-    
-    public int getMouseX() {
-        return mouseX;
-    }
-    
-    public int getMouseY() {
-        return mouseY;
-    }
-    
-    /**
-     * Adjusts the mouse position to the current SCALE.
-     */
-    private void setMousePossition() {
-        mouseX = Mouse.getMouseX() / Display.SCALE;
-        mouseY = Mouse.getMouseY() / Display.SCALE;
-    }
+
     
     @Override
     public void addProjectile(int x, int y) {

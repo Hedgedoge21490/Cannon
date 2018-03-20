@@ -14,11 +14,8 @@ import main.java.com.monkeystomp.entity.particle.Particle;
 import main.java.com.monkeystomp.graphics.Display;
 import main.java.com.monkeystomp.graphics.Screen;
 import main.java.com.monkeystomp.graphics.Sprite;
-import java.io.IOException;
 import java.util.ArrayList;
-import javax.imageio.ImageIO;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
+
 
 /**
  *
@@ -37,26 +34,8 @@ public class GrassLevel extends Level {
         addBuildings();
         setMobWaveTimer();
     }
-    
-    protected void loadLevel(String path) {
-        try {
-            levelBackgroundImage = ImageIO.read(Level.class.getResource(path));
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-            System.err.println("Level could not load background image!");
-        }
-        try {
-            AudioInputStream ais = AudioSystem.getAudioInputStream(Level.class.getResource("/audio/songs/sousa-semperfidelis.wav"));
-            backgroundMusic = AudioSystem.getClip();
-            backgroundMusic.open(ais);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-            System.err.println("Level could not load background music!");
-        }
-    }
-    
+
+    @Override
     protected void generateLevel() {
         int[] pixels = new int[levelBackgroundImage.getWidth() * levelBackgroundImage.getHeight()];
         levelBackgroundImage.getRGB(0, 0, levelBackgroundImage.getWidth(), levelBackgroundImage.getHeight(), pixels, 0, levelBackgroundImage.getWidth());
@@ -69,15 +48,6 @@ public class GrassLevel extends Level {
             if (pixels[i] == 0xff3F372A) pixels[i] += (0x000100 * random.nextInt(10)) + (0x010000 * random.nextInt(20));
         }
         levelBackgroundSprite = new Sprite(0, 50, pixels, levelBackgroundImage.getWidth(), levelBackgroundImage.getHeight());
-        //backgroundMusic.loop(Clip.LOOP_CONTINUOUSLY);
-    }
-
-    /**
-     * Adjusts the mouse position to the current SCALE.
-     */
-    private void setMousePossition() {
-        mouseX = Mouse.getMouseX() / Display.SCALE;
-        mouseY = Mouse.getMouseY() / Display.SCALE;
     }
     
     private void addBuildings() {
@@ -157,25 +127,28 @@ public class GrassLevel extends Level {
     private double getForce() {
         return Math.sqrt((16 * Math.pow((targetX - cannon.barrelX), 2)) / (Math.pow(Math.cos(Math.toRadians(cannon.angle)), 2) * ((targetY - cannon.barrelY) + (targetX - cannon.barrelX) * Math.tan(Math.toRadians(cannon.angle)))));
     }
-    
+
     private boolean feildIsRightClicked() {
         return Mouse.getMouseB() == 3 && mouseX > 100 && mouseY > 164 && mouseX <= Display.SCREEN_WIDTH && mouseY <= Display.SCREEN_HEIGHT;
     }
-    
+
+    @Override
     public boolean mobHere(int x, int y) {
         for (Mob mob: enemies) {
             if (mob.mobHere(x, y)) return true;
         }
         return false;
     }
-    
+
+    @Override
     public boolean mobHere(int xa, int ya, int x, int y) {
         for (Mob mob: enemies) {
             if (mob.mobHere(xa, ya) && mob.x != x && mob.y != y) return true;
         }
         return false;
     }
-    
+
+    @Override
     public boolean buildingHere(int x, int y) {
         for (Building build: backgroundBuildings) {
             if (build.buildingHere(x, y)) return true;
@@ -210,7 +183,8 @@ public class GrassLevel extends Level {
         }
         return false;
     }
-    
+
+    @Override
     public void damagePlatform(int damage) {
         platform.damagePlatform(damage);
     }

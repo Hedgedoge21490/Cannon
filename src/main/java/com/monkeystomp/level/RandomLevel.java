@@ -20,12 +20,14 @@ class RandomLevel extends Level {
     public RandomLevel() {
         super();
     }
-    
+
+    @Override
     protected void generateLevel() {
         backgroundColor = random.nextInt();
         groundColor = random.nextInt();
     }
-    
+
+    @Override
     public void render(Screen screen) {
         screen.renderLevel(backgroundColor, groundColor);
     }

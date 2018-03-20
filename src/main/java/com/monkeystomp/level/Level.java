@@ -5,13 +5,19 @@
  */
 package main.java.com.monkeystomp.level;
 
+import main.java.com.monkeystomp.controls.Mouse;
 import main.java.com.monkeystomp.entity.cannon.Cannon;
 import main.java.com.monkeystomp.entity.particle.Particle;
 import main.java.com.monkeystomp.entity.platform.Platform;
+import main.java.com.monkeystomp.graphics.Display;
 import main.java.com.monkeystomp.graphics.Screen;
 import main.java.com.monkeystomp.graphics.Sprite;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.Random;
+import javax.imageio.ImageIO;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
 
@@ -63,10 +69,25 @@ public abstract class Level {
         loadLevel(path);
         generateLevel();
     }
-    
+
     protected void loadLevel(String path) {
+        try {
+            levelBackgroundImage = ImageIO.read(Level.class.getResource(path));
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Level could not load background image!");
+        }
+        try {
+            AudioInputStream ais = AudioSystem.getAudioInputStream(Level.class.getResource("/audio/songs/sousa-semperfidelis.wav"));
+            backgroundMusic = AudioSystem.getClip();
+            backgroundMusic.open(ais);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-    
+
     protected void generateLevel() {
     }
     
@@ -134,6 +155,11 @@ public abstract class Level {
     }
     
     public void damagePlatform(int damage) {
+    }
+
+    public void setMousePossition() {
+        mouseX = Mouse.getMouseX() / Display.SCALE;
+        mouseY = Mouse.getMouseY() / Display.SCALE;
     }
     
     protected void setMouseClickSprite() {
