@@ -130,7 +130,11 @@ public class Mob extends Entity {
                     else if (attacking && anim % 20 < 10) sprite = Sprite.policeman_left_attacking_1;
                     else if (attacking && anim % 20 >= 10) sprite = Sprite.policeman_left_attacking_2;
                     break;
+                default:
+                    break;
             }
+            break;
+        default:
             break;
         }
     }

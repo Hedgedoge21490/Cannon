@@ -24,9 +24,7 @@ class BasicPlatform extends Platform {
     public void damagePlatform(int damage) {
         hitPoints -= damage;
     }
-    
+
     @Override
-    public void update() {
-    }
-    
+    public void update() {/*Hier wird kein Update benötigt.*/}
 }

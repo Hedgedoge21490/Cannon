@@ -6,7 +6,6 @@
 package main.java.com.monkeystomp.controls;
 
 import main.java.com.monkeystomp.entity.cannon.Cannon;
-import main.java.com.monkeystomp.entity.platform.Platform;
 import main.java.com.monkeystomp.entity.projectiles.Projectile;
 import main.java.com.monkeystomp.graphics.Display;
 import main.java.com.monkeystomp.graphics.Font;
@@ -58,6 +57,9 @@ public class ToolBar {
     private Font font;
     // Handle for the cannon
     private Cannon cannon;
+
+    private String aoe = "AREA OF EFFECT = ";
+    private String dmg = "DAMAGE = ";
     
     public ToolBar(int width, int height, int scale, int toolbarBottomEdge, Display display, Keyboard key) {
         this.width = width;
@@ -68,7 +70,7 @@ public class ToolBar {
         this.key = key;
         font = new Font();
         background = new Sprite(0, 0, buildBackground(), width, TOOLBAR_BOTTOM_EDGE);
-        infoBoxSlotOne = buildNameBoxSprite("AREA OF EFFECT = ", 3);
+        infoBoxSlotOne = buildNameBoxSprite(aoe, 3);
         infoBoxSlotTwo = buildNameBoxSprite(Projectile.TURTLECANNONBALLNAME, 3);
         infoBoxSlotThree = buildNameBoxSprite(Projectile.MASTERCANNONBALLNAME, 3);
         infoBoxSlotFour = buildNameBoxSprite(Projectile.WINDUPCANNONBALLNAME, 3);
@@ -191,32 +193,33 @@ public class ToolBar {
             case Projectile.WINDUPCANNONBALL:
                 screen.renderSprite(81, 18, Sprite.projectile_selection);
                 break;
+            default:
+                break;
         }
         // Info boxes next to cursor.
         if (showInfoBox1) {
             screen.renderSprite(mouseX, mouseY + 20, infoBoxSlotOne);
             font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 23, Projectile.BASICCANNONBALLNAME, screen);
-            font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 32, "DAMAGE = " + Integer.toString(Projectile.BASICCANNONBALL_DAMAGE), screen);
-            font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 41, "AREA OF EFFECT = " + Integer.toString(Projectile.BASICCANNONBALL_AREA), screen);
+            font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 32, dmg + Integer.toString(Projectile.BASICCANNONBALL_DAMAGE), screen);
+            font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 41, aoe + Integer.toString(Projectile.BASICCANNONBALL_AREA), screen);
         }
         else if (showInfoBox2) {
             screen.renderSprite(mouseX, mouseY + 20, infoBoxSlotTwo);
             font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 23, Projectile.TURTLECANNONBALLNAME, screen);
-            font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 32, "DAMAGE = " + Integer.toString(Projectile.TURTLESHELLCANNONBALL_DAMAGE), screen);
-            font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 41, "AREA OF EFFECT = " + Integer.toString(Projectile.TURTLESHELLCANNONBALL_AREA), screen);
+            font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 32, dmg + Integer.toString(Projectile.TURTLESHELLCANNONBALL_DAMAGE), screen);
+            font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 41, aoe + Integer.toString(Projectile.TURTLESHELLCANNONBALL_AREA), screen);
         }
         else if (showInfoBox3) {
             screen.renderSprite(mouseX, mouseY + 20, infoBoxSlotThree);
             font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 23, Projectile.MASTERCANNONBALLNAME, screen);
-            font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 32, "DAMAGE = " + Integer.toString(Projectile.MASTERCANNONBALL_DAMAGE), screen);
-            font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 41, "AREA OF EFFECT = " + Integer.toString(Projectile.MASTERCANNONBALL_AREA), screen);
+            font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 32, dmg + Integer.toString(Projectile.MASTERCANNONBALL_DAMAGE), screen);
+            font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 41, aoe + Integer.toString(Projectile.MASTERCANNONBALL_AREA), screen);
         }
         else if (showInfoBox4) {
             screen.renderSprite(mouseX, mouseY + 20, infoBoxSlotFour);
             font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 23, Projectile.WINDUPCANNONBALLNAME, screen);
-            font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 32, "DAMAGE = " + Integer.toString(Projectile.WINDUPCANNONBALL_DAMAGE), screen);
-            font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 41, "AREA OF EFFECT = " + Integer.toString(Projectile.WINDUPCANNONBALL_AREA), screen);
+            font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 32, dmg + Integer.toString(Projectile.WINDUPCANNONBALL_DAMAGE), screen);
+            font.renderSuperSmallCharacters2(mouseX + 3, mouseY + 41, aoe + Integer.toString(Projectile.WINDUPCANNONBALL_AREA), screen);
         }
     }
-    
 }

@@ -49,12 +49,12 @@ public class Display extends Canvas implements Runnable {
     // Set to true when thread is started. Set to false when game is stoped.
     private boolean running = false;
     // The thread running the game loop on the Canvas.
-    private Thread displayThread;
+    private transient Thread displayThread;
     // Image and screen rendering variables.
     // A handle on the screen class to recive pixel information.
-    private Screen screen;    
+    private transient Screen screen;
     // The image that is being rendered to the screen.
-    private BufferedImage image;
+    private transient BufferedImage image;
     // Pixels to be loaded to the BufferedImage.
     private int[] pixels;
     // Gamestate Variables
@@ -65,20 +65,20 @@ public class Display extends Canvas implements Runnable {
     private int gameState;
     // Game element variables.
     // The ToolBar class is incharge of the toolbar at the top of the screen.
-    private ToolBar toolbar;
+    private transient ToolBar toolbar;
     // The Level class is used to control the level this class is updating and rendering.
-    public Level level;
+    public transient Level level;
     // The first screen you see when you start the game.
-    public StartScreen startScreen;
+    public transient StartScreen startScreen;
     // Used to update and render a specific cannon
-    public Cannon cannon;
+    public transient Cannon cannon;
     // Used to update and render a specific platform
-    public Platform platform;
+    public transient Platform platform;
     // Allows access to mouse and keyboard input.
-    private Keyboard key;
-    private Mouse mouse;
+    private transient Keyboard key;
+    private transient Mouse mouse;
     // The window that comes up when game is paused.
-    private PauseWindow pauseWindow;
+    private transient PauseWindow pauseWindow;
     // Cursor variables
     private Cursor beerBottle;
     private static final String BEER_BOTTLE_POINTER_NAME = "Beer Bottle Pointer";

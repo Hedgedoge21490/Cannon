@@ -86,6 +86,8 @@ public class BasicCannon extends Cannon {
                 barrelX = x + 36;
                 barrelY = y + 8;
                 break;
+            default:
+                break;
         }
     }
     
@@ -104,6 +106,8 @@ public class BasicCannon extends Cannon {
                 break;
             case Projectile.WINDUPCANNONBALL:
                 reloadTime = Projectile.WINDUPCANNONBALL_RELOAD_TIME;
+                break;
+            default:
                 break;
         }
         fireStatusMessage = "READY TO FIRE";
