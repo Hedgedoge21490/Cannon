@@ -56,16 +56,28 @@ public class Font {
         }
         return sprites;
     }
-    
-    public Sprite returnSmallCharacterSprite(String text, int color) {
-        Sprite result;
-        Sprite[] letters = returnSmallCharacterSprites(text);
+
+    private int calculateWidth(String text){
         int spaces = 0;
+
         for (int i = 0; i < text.length(); i++) {
             if (text.charAt(i) == ' ') spaces++;
         }
+
         int width = (text.length() * 9) - (spaces * 3);
-        spaces = 0;
+        return width;
+    }
+
+    public Sprite returnSmallCharacterSprite(String text, int color) {
+
+        Sprite result;
+        Sprite[] letters = returnSmallCharacterSprites(text);
+
+        int width = calculateWidth(text);
+
+        //reset Spaces?
+        int spaces = 0;
+
         int[] pixels = new int[width * 8];
         for (int i = 0; i < pixels.length; i++) {
             pixels[i] = 0xffff00ff;
@@ -79,7 +91,6 @@ public class Font {
                 for (int x = i * 9 - (spaces * 3); x < (i * 9 - (spaces * 3)) + 8; x++) {
                     int xx = (x - (i * 9 - (spaces * 3)));
                     if (letters[i].getPixels()[xx + y * letters[i].getWidth()] != 0xffff00ff) {
-                        //pixels[x + y * width] = letters[i].getPixels()[xx + y * letters[i].getWidth()];
                         pixels[x + y * width] = color;
                     }
                 }

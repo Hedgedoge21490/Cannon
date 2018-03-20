@@ -53,12 +53,7 @@ public abstract class Level {
     protected int clicksAnim = 0;
     
     protected Clip backgroundMusic;
-    
-    public static Level randomLevel = new RandomLevel();
-    public static Level grassLevel = new GrassLevel("/levels/grass_level.png");
-    public static Level purpleLevel = new PurpleLevel("/levels/purple_ground_level.png");
-    
-    
+
     public Level() {
         random = new Random();
         generateLevel();

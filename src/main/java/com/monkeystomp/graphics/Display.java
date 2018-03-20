@@ -5,10 +5,12 @@
  */
 package main.java.com.monkeystomp.graphics;
 
+import main.java.com.monkeystomp.entity.cannon.BasicCannon;
 import main.java.com.monkeystomp.entity.cannon.Cannon;
 import main.java.com.monkeystomp.controls.Keyboard;
 import main.java.com.monkeystomp.controls.Mouse;
 import main.java.com.monkeystomp.controls.ToolBar;
+import main.java.com.monkeystomp.level.GrassLevel;
 import main.java.com.monkeystomp.menus.PauseWindow;
 import main.java.com.monkeystomp.entity.platform.Platform;
 import java.awt.Canvas;
@@ -23,7 +25,6 @@ import main.java.com.monkeystomp.menus.StartScreen;
 import java.awt.Cursor;
 import java.awt.Point;
 import java.io.IOException;
-import java.nio.Buffer;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
@@ -90,6 +91,8 @@ public class Display extends Canvas implements Runnable {
     private Cursor flameSword;
     private static final String FLAME_SWORD_POINTER_NAME = "Flame Sword Pointer";
     private static final int FLAME_SWORD_POINTER = 2;
+
+
     
     public Display () {
         size = Toolkit.getDefaultToolkit().getScreenSize();
@@ -104,11 +107,9 @@ public class Display extends Canvas implements Runnable {
         key = new Keyboard();
         mouse = new Mouse();
         startScreen = new StartScreen();
-        level = Level.grassLevel;
+        level = GrassLevel.grassLevel;
         pauseWindow = new PauseWindow(screen);
         toolbar = new ToolBar(SCREEN_WIDTH, SCREEN_HEIGHT, SCALE, TOOLBAR_BOTTOM_EDGE, this, key);
-        //changeLevel(Level.grassLevel);
-        //initGame(Cannon.basicCannon, Platform.basicPlatform);
         gameState = START_SCREEN;
         addKeyListener(key);
         addMouseListener(mouse);
@@ -188,6 +189,8 @@ public class Display extends Canvas implements Runnable {
             case FLAME_SWORD_POINTER:
                 frame.getContentPane().setCursor(flameSword);
                 break;
+            default:
+                break;
         }
     }
     
@@ -220,7 +223,6 @@ public class Display extends Canvas implements Runnable {
             displayThread.join();
         }
         catch (InterruptedException e) {
-            System.err.println("The thread was interrupted while trying thread.join() in stop method");
             e.printStackTrace();
         }
     }
@@ -262,8 +264,8 @@ public class Display extends Canvas implements Runnable {
             case START_SCREEN:
                 startScreen.update();
                 if (startScreen.startGame) {
-                    changeLevel(Level.grassLevel);
-                    initGame(Cannon.basicCannon, Platform.basicPlatform);
+                    changeLevel(GrassLevel.grassLevel);
+                    initGame(BasicCannon.basicCannon, Platform.basicPlatform);
                     gameState = GAME_RUNNING;
                 }
                 break;

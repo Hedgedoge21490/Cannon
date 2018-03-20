@@ -19,6 +19,8 @@ import javax.sound.sampled.LineEvent;
  * @author Aaron
  */
 public class BasicCannon extends Cannon {
+
+    public static Cannon basicCannon = new BasicCannon();
     
     public BasicCannon() {
         x = 30;

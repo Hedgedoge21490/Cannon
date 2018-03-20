@@ -12,7 +12,9 @@ import main.java.com.monkeystomp.graphics.Screen;
  * @author aaron
  */
 class RandomLevel extends Level {
-    
+
+    public static Level randomLevel = new RandomLevel();
+
     private int backgroundColor;
     private int groundColor;
     

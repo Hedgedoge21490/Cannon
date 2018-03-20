@@ -17,7 +17,10 @@ import java.util.ArrayList;
  * @author Aaron
  */
 class PurpleLevel extends Level {
-    
+
+    public static Level purpleLevel = new PurpleLevel("/levels/purple_ground_level.png");
+
+
     private ArrayList<Projectile> projectiles = new ArrayList<>();
 
     public PurpleLevel(String path) {

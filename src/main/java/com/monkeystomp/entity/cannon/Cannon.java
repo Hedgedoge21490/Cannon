@@ -58,9 +58,6 @@ public abstract class Cannon extends Entity {
     // Sound clip for the cannon firing
     protected Clip firingSound;
     
-    // All types of cannons
-    public static Cannon basicCannon = new BasicCannon();
-    
     public void FireCannon() { }
     
     public int getAccuracy() {

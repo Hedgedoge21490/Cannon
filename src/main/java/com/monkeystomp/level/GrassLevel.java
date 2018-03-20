@@ -22,6 +22,8 @@ import java.util.ArrayList;
  * @author Aaron
  */
 public class GrassLevel extends Level {
+
+    public static Level grassLevel = new GrassLevel("/levels/grass_level.png");
     
     private ArrayList<Projectile> projectiles = new ArrayList<>();
     private ArrayList<Particle> particles = new ArrayList<>();
@@ -188,8 +190,36 @@ public class GrassLevel extends Level {
     public void damagePlatform(int damage) {
         platform.damagePlatform(damage);
     }
-    
-    //private int anim = 0;
+
+    public void updateBuildings(){
+        for (int i = 0; i < backgroundBuildings.size(); i++) {
+            if (backgroundBuildings.get(i).isRemoved()) backgroundBuildings.remove(i);
+            else backgroundBuildings.get(i).update();
+        }
+        for (int i = 0; i < foregroundBuildings.size(); i++) {
+            if (foregroundBuildings.get(i).isRemoved()) foregroundBuildings.remove(i);
+            else foregroundBuildings.get(i).update();
+        }
+    }
+    public void updateProjectiles(){
+        for (int i = 0; i < projectiles.size(); i++) {
+            if (projectiles.get(i).isRemoved()) projectiles.remove(i);
+            else projectiles.get(i).update();
+        }
+    }
+    public void updateEnemies(){
+        for (int i = 0; i < enemies.size(); i++) {
+            if (enemies.get(i).isRemoved()) enemies.remove(i);
+            else enemies.get(i).update();
+        }
+    }
+    public void updateParticles(){
+        for (int i = 0; i < particles.size(); i++) {
+            if (particles.get(i).isRemoved()) particles.remove(i);
+            else particles.get(i).update();
+        }
+    }
+
     @Override
     public void update() {
         if (anim > 10000) anim = 0;
@@ -210,26 +240,12 @@ public class GrassLevel extends Level {
             setMouseClickSprite();
             clicksAnim++;
         }
-        for (int i = 0; i < backgroundBuildings.size(); i++) {
-            if (backgroundBuildings.get(i).isRemoved()) backgroundBuildings.remove(i);
-            else backgroundBuildings.get(i).update();
-        }
-        for (int i = 0; i < foregroundBuildings.size(); i++) {
-            if (foregroundBuildings.get(i).isRemoved()) foregroundBuildings.remove(i);
-            else foregroundBuildings.get(i).update();
-        }
-        for (int i = 0; i < projectiles.size(); i++) {
-            if (projectiles.get(i).isRemoved()) projectiles.remove(i);
-            else projectiles.get(i).update();
-        }
-        for (int i = 0; i < enemies.size(); i++) {
-            if (enemies.get(i).isRemoved()) enemies.remove(i);
-            else enemies.get(i).update();
-        }
-        for (int i = 0; i < particles.size(); i++) {
-            if (particles.get(i).isRemoved()) particles.remove(i);
-            else particles.get(i).update();
-        }
+
+        updateBuildings();
+
+        updateProjectiles();
+        updateEnemies();
+        updateParticles();
     }
     
     @Override
