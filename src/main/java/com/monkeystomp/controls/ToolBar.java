@@ -113,42 +113,57 @@ public class ToolBar {
         mouseX = Mouse.getMouseX() / Display.SCALE;
         mouseY = Mouse.getMouseY() / Display.SCALE;
     }
-    
+
+    private void firstInfobox(){
+        showInfoBox1 = true;
+        showInfoBox2 = false;
+        showInfoBox3 = false;
+        showInfoBox4 = false;
+        if (Mouse.getMouseB() == 1) selected_shell = Projectile.BASICCANNONBALL;
+    }
+    private void secondInfobox(){
+        showInfoBox1 = false;
+        showInfoBox2 = true;
+        showInfoBox3 = false;
+        showInfoBox4 = false;
+        if (Mouse.getMouseB() == 1) selected_shell = Projectile.TURTLESHELLCANNONBALL;
+    }
+    private void thirdInfobox(){
+        showInfoBox1 = false;
+        showInfoBox2 = false;
+        showInfoBox3 = true;
+        showInfoBox4 = false;
+        if (Mouse.getMouseB() == 1) selected_shell = Projectile.MASTERCANNONBALL;
+    }
+    private void fourthInfobox(){
+        showInfoBox1 = false;
+        showInfoBox2 = false;
+        showInfoBox3 = false;
+        showInfoBox4 = true;
+        if (Mouse.getMouseB() == 1) selected_shell = Projectile.WINDUPCANNONBALL;
+    }
+    private void noInfobox(){
+        showInfoBox1 = false;
+        showInfoBox2 = false;
+        showInfoBox3 = false;
+        showInfoBox4 = false;
+    }
+
     private void checkMouseHover() {
         if (mouseX >= 10 && mouseX <= 26 && mouseY >= 22 && mouseY <= 38) {
-            showInfoBox1 = true;
-            showInfoBox2 = false;
-            showInfoBox3 = false;
-            showInfoBox4 = false;
-            if (Mouse.getMouseB() == 1) selected_shell = Projectile.BASICCANNONBALL;
-            
+            firstInfobox();
         }
         else if (mouseX >= 35 && mouseX <= 51 && mouseY >= 22 && mouseY <= 38) {
-            showInfoBox1 = false;
-            showInfoBox2 = true;
-            showInfoBox3 = false;
-            showInfoBox4 = false;
-            if (Mouse.getMouseB() == 1) selected_shell = Projectile.TURTLESHELLCANNONBALL;
+            secondInfobox();
         }
         else if (mouseX >= 60 && mouseX <= 76 && mouseY >= 22 && mouseY <= 38) {
-            showInfoBox1 = false;
-            showInfoBox2 = false;
-            showInfoBox3 = true;
-            showInfoBox4 = false;
-            if (Mouse.getMouseB() == 1) selected_shell = Projectile.MASTERCANNONBALL;
+            thirdInfobox();
         }
         else if (mouseX >= 85 && mouseX <= 101 && mouseY >= 22 && mouseY <= 38) {
-            showInfoBox1 = false;
-            showInfoBox2 = false;
-            showInfoBox3 = false;
-            showInfoBox4 = true;
-            if (Mouse.getMouseB() == 1) selected_shell = Projectile.WINDUPCANNONBALL;
+            fourthInfobox();
         }
         else {
-            showInfoBox1 = false;
-            showInfoBox2 = false;
-            showInfoBox3 = false;
-            showInfoBox4 = false;
+            noInfobox();
         }
     }
     
