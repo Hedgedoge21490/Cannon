@@ -51,6 +51,8 @@ public class Mob extends Entity {
                 attackSpeed = 30;
                 points = 15;
                 break;
+            default:
+                break;
         }
     }
     
