@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monkeystomp.entity.particle;
+package main.java.com.monkeystomp.entity.particle;
 
 import com.monkeystomp.entity.Entity;
 import com.monkeystomp.graphics.Screen;
@@ -15,7 +15,7 @@ import com.monkeystomp.graphics.Sprite;
  */
 public class Particle extends Entity {
     
-    private double x, y;
+    private double xCoordinate, yCoordinate;
     private double startingX, startingY;
     private double force;
     // The angle in radians the particle is on.
@@ -28,8 +28,8 @@ public class Particle extends Entity {
     private boolean movingDown = false;
     
     public Particle(double x, double y, double force, double angle, int color) {
-        this.x = startingX = x;
-        this.y = startingY = y;
+        this.xCoordinate = startingX = x;
+        this.yCoordinate = startingY = y;
         this.force = force;
         this.angle = Math.toRadians(angle);
         this.color = color;
@@ -38,20 +38,20 @@ public class Particle extends Entity {
     }
     
     public void update() {
-        if (movingDown && y > groundLevel) remove();
+        if (movingDown && yCoordinate > groundLevel) remove();
         else {
-            if (movingDown && y > groundLevel - 12) {
-                if (level.damageMob((int)x, (int)y, 5)) remove();
+            if (movingDown && yCoordinate > groundLevel - 12) {
+                if (level.damageMob((int) xCoordinate, (int) yCoordinate, 5)) remove();
             }
-            lastY = y;
-            x = ((anim / 15) * (force * Math.cos(angle)) + startingX);
-            y = (16 * Math.pow((anim / 15), 2.0)) - ((anim / 15) * (force * Math.sin(angle))) + startingY;
+            lastY = yCoordinate;
+            xCoordinate = ((anim / 15) * (force * Math.cos(angle)) + startingX);
+            yCoordinate = (16 * Math.pow((anim / 15), 2.0)) - ((anim / 15) * (force * Math.sin(angle))) + startingY;
             anim++;
-            if (lastY < y) movingDown = true;
+            if (lastY < yCoordinate) movingDown = true;
         }
     }
     
     public void render(Screen screen) {
-        screen.renderSprite((int) x, (int) y, sprite);
+        screen.renderSprite((int) xCoordinate, (int) yCoordinate, sprite);
     }
 }
