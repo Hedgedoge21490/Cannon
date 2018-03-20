@@ -29,6 +29,7 @@ public class Screen {
     int randomColor;
     String randomHexCode = "";
     String hexValues = "0123456789abcdef";
+
     public void RandomBackgroundColor() {
         for (int i = 0; i < 6; i++) {
             randomHexCode += hexValues.charAt(random.nextInt(16));
@@ -76,7 +77,7 @@ public class Screen {
         
     }
     
-    public void renderLevel(int backgroundColor, int groundColor) {
+    public void renderLevel(int backgroundColor) {
         for (int y = TOP_OF_VIEW; y < height; y++) {
             for (int x = 0; x < width; x++) {
                 pixels[x + y * width] = backgroundColor;

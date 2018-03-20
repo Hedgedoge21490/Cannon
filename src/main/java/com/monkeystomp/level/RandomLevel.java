@@ -16,7 +16,6 @@ class RandomLevel extends Level {
     public static Level globalRandomLevel = new RandomLevel();
 
     private int backgroundColor;
-    private int groundColor;
     
 
     public RandomLevel() {
@@ -26,11 +25,10 @@ class RandomLevel extends Level {
     @Override
     protected void generateLevel() {
         backgroundColor = random.nextInt();
-        groundColor = random.nextInt();
     }
 
     @Override
     public void render(Screen screen) {
-        screen.renderLevel(backgroundColor, groundColor);
+        screen.renderLevel(backgroundColor);
     }
 }

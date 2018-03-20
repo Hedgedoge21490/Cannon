@@ -224,7 +224,8 @@ public class Display extends Canvas implements Runnable {
             displayThread.join();
         }
         catch (InterruptedException e) {
-            e.printStackTrace();
+            //displayThread.interrupt();
+            throw new RuntimeException(e);
         }
     }
     

@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0b873bd-76d0-4e29-9192-cc95f869dbf8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/BasicPlatform.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/BasicPlatform.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/Platform.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/Platform.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/BasicCannonball.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/BasicCannonball.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/MasterCannonball.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/MasterCannonball.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/TurtleShellCannonball.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/TurtleShellCannonball.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Display.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Display.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/menus/StartScreen.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/menus/StartScreen.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Screen.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Screen.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/level/RandomLevel.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/level/RandomLevel.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,13 +42,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Display.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Display.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Display.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="268" column="79" lean-forward="false" selection-start-line="268" selection-start-column="79" selection-end-line="268" selection-end-column="79" />
+            <state relative-caret-position="371">
+              <caret line="112" column="22" lean-forward="false" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToolBar.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/controls/ToolBar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="881">
+              <caret line="74" column="62" lean-forward="true" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Screen.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Screen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="657">
+              <caret line="79" column="47" lean-forward="false" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RandomLevel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/level/RandomLevel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+              <folding>
+                <element signature="e#469#470#0" expanded="true" />
+                <element signature="e#492#493#0" expanded="true" />
+                <element signature="e#544#545#0" expanded="true" />
+                <element signature="e#594#595#0" expanded="true" />
+                <element signature="e#649#650#0" expanded="true" />
+                <element signature="e#700#701#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,10 +125,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/BasicCannon.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/ColorUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Font.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Screen.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/level/Level.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/level/PurpleLevel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/level/RandomLevel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/menus/PauseWindow.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/level/GrassLevel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/BasicCannonball.java" />
@@ -104,6 +137,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/Platform.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/BasicPlatform.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Display.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/level/RandomLevel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Screen.java" />
       </list>
     </option>
   </component>
@@ -426,13 +461,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.228125" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25556734" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25556734" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -482,16 +517,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1855#1856#0" expanded="true" />
             <element signature="e#1886#1887#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/controls/ToolBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="112" column="23" lean-forward="false" selection-start-line="112" selection-start-column="23" selection-end-line="112" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -621,14 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Screen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="83" column="9" lean-forward="false" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Sprite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -675,17 +692,6 @@
           <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/level/RandomLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -769,11 +775,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Display.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="268" column="79" lean-forward="false" selection-start-line="268" selection-start-column="79" selection-end-line="268" selection-end-column="79" />
+        <state relative-caret-position="371">
+          <caret line="112" column="22" lean-forward="false" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/controls/ToolBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="881">
+          <caret line="74" column="62" lean-forward="true" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/level/RandomLevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding>
+            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Screen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="79" column="47" lean-forward="false" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
