@@ -28,11 +28,8 @@ public class StartScreen extends Menu{
     public boolean options = false;
     private boolean musicPlaying = false;
     private Clip backgroundMusic;
-    
-    //private ArrayList<ClickableButton> buttons = new ArrayList<>();
-    
+
     public StartScreen() {
-        //background = new Sprite(0, 0, createBackgroundSprite(), Display.SCREEN_WIDTH, Display.SCREEN_HEIGHT);
         background = Sprite.start_screen_background;
         addButtons();
         try {
@@ -45,18 +42,6 @@ public class StartScreen extends Menu{
             System.err.println("Level could not load background music!");
         }
         playMusic();
-    }
-    
-    private int[] createBackgroundSprite() {
-        int[] result = new int[(Display.SCREEN_WIDTH) * (Display.SCREEN_HEIGHT)];
-        for (int i = 0; i < ToolBar.BORDER_SHADES; i++) {
-            for (int y = 0; y < (Display.SCREEN_HEIGHT - (4 * i)); y++) {
-                for (int x = 0; x < (Display.SCREEN_WIDTH - (4 * i)); x++) {
-                    result[(x + (2 * i)) + (y + (2 * i)) * Display.SCREEN_WIDTH] = ToolBar.BACKGROUNDCOLOR - ((4 - i) * 328960);
-                }
-            }
-        }
-        return result;
     }
     
     private final void addButtons() {

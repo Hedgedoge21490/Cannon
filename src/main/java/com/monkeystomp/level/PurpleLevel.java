@@ -18,7 +18,7 @@ import java.util.ArrayList;
  */
 class PurpleLevel extends Level {
 
-    public static Level purpleLevel = new PurpleLevel("/levels/purple_ground_level.png");
+    public static Level globalPurpleLevel = new PurpleLevel("/levels/purple_ground_level.png");
 
 
     private ArrayList<Projectile> projectiles = new ArrayList<>();
@@ -32,7 +32,6 @@ class PurpleLevel extends Level {
         int[] pixels = new int[levelBackgroundImage.getWidth() * levelBackgroundImage.getHeight()];
         levelBackgroundImage.getRGB(0, 0, levelBackgroundImage.getWidth(), levelBackgroundImage.getHeight(), pixels, 0, levelBackgroundImage.getWidth());
         levelBackgroundSprite = new Sprite(0, 50, pixels, levelBackgroundImage.getWidth(), levelBackgroundImage.getHeight());
-        //backgroundMusic.loop(Clip.LOOP_CONTINUOUSLY);
     }
 
     
@@ -46,11 +45,8 @@ class PurpleLevel extends Level {
         return Mouse.getMouseB() == 3 && mouseX > 100 && mouseY > 164;
     }
     
-    //private int anim = 0;
     @Override
     public void update() {
-//        if (anim > 10000) anim = 0;
-//        else anim++;
         setMousePossition();
         if (feildIsRightClicked()) {
             renderClicks = true;

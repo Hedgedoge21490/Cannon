@@ -27,6 +27,8 @@ import java.awt.Color;
  */   
 public class ColorUtil
 {
+  private ColorUtil(){/*Empty Constructor to hide implicit public one.*/}
+
   /**
    * Blend two colors.
    * 

@@ -34,7 +34,6 @@ public class Screen {
             randomHexCode += hexValues.charAt(random.nextInt(16));
         }
         randomColor = Integer.parseInt(randomHexCode, 16);
-        System.out.println(randomHexCode);
         randomHexCode = "";
         for (int i = 0; i < pixels.length; i++) {
             pixels[i] = randomColor;
@@ -42,10 +41,7 @@ public class Screen {
     }
     
     public void renderSprite(int xp, int yp, Sprite sprite) {
-//        if (fixed) {
-//            xp -= xOffset;
-//            yp -= yOffset;
-//        }
+
         for (int y = 0; y < sprite.getHeight(); y++) {
             int ya = y + yp;
             for (int x = 0; x < sprite.getWidth(); x++) {
@@ -86,10 +82,5 @@ public class Screen {
                 pixels[x + y * width] = backgroundColor;
             }
         }
-//        for (int y = (int)(height * 2 / 3); y < height; y++) {
-//            for (int x = 0; x < width; x++) {
-//                pixels[x + y * width] = groundColor;
-//            }
-//        }
     }
 }

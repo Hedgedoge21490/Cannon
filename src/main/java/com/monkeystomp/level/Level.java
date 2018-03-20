@@ -133,15 +133,7 @@ public abstract class Level {
     public boolean buildingHere(int x, int y) {
         return false;
     }
-    
-    public boolean mobHere(int x, int y) {
-        return false;
-    }
-    
-    public boolean mobHere(int xa, int ya, int x, int y) {
-        return false;
-    }
-    
+
     public void damageBuilding(int x, int y, int damage) {
     }
     

@@ -20,7 +20,7 @@ import javax.sound.sampled.LineEvent;
  */
 public class BasicCannon extends Cannon {
 
-    public static Cannon basicCannon = new BasicCannon();
+    public static Cannon globalBasicCannon = new BasicCannon();
     
     public BasicCannon() {
         x = 30;

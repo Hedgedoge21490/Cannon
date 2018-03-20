@@ -107,7 +107,7 @@ public class Display extends Canvas implements Runnable {
         key = new Keyboard();
         mouse = new Mouse();
         startScreen = new StartScreen();
-        level = GrassLevel.grassLevel;
+        level = GrassLevel.globalGrassLevel;
         pauseWindow = new PauseWindow(screen);
         toolbar = new ToolBar(SCREEN_WIDTH, SCREEN_HEIGHT, SCALE, TOOLBAR_BOTTOM_EDGE, this, key);
         gameState = START_SCREEN;
@@ -264,8 +264,8 @@ public class Display extends Canvas implements Runnable {
             case START_SCREEN:
                 startScreen.update();
                 if (startScreen.startGame) {
-                    changeLevel(GrassLevel.grassLevel);
-                    initGame(BasicCannon.basicCannon, Platform.basicPlatform);
+                    changeLevel(GrassLevel.globalGrassLevel);
+                    initGame(BasicCannon.globalBasicCannon, Platform.basicPlatform);
                     gameState = GAME_RUNNING;
                 }
                 break;

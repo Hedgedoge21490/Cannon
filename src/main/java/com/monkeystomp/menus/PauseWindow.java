@@ -45,9 +45,9 @@ public class PauseWindow extends Menu{
     private int[] createBackgroundSprite() {
         int[] result = new int[10000];
         for (int i = 0; i < ToolBar.BORDER_SHADES; i++) {
-            for (int y = 0; y < (100 - (4 * i)); y++) {
-                for (int x = 0; x < (100 - (4 * i)); x++) {
-                    result[(x + (2 * i)) + (y + (2 * i)) * 100] = ToolBar.BACKGROUNDCOLOR - ((4 - i) * 328960);
+            for (int yCount = 0; yCount < (100 - (4 * i)); yCount++) {
+                for (int xCount = 0; xCount < (100 - (4 * i)); xCount++) {
+                    result[(xCount + (2 * i)) + (yCount + (2 * i)) * 100] = ToolBar.BACKGROUNDCOLOR - ((4 - i) * 328960);
                 }
             }
         }
@@ -75,12 +75,12 @@ public class PauseWindow extends Menu{
     public void update() {
         if (!readyToRender) {
             // blend the colors of background and menubox
-            for (int y = 0; y < 100; y++) {
-                for (int x = 0; x < 100; x++) {
-                    Color background = new Color(screen.pixels[(x + 260) + (y + 110) * screen.width]);
+            for (int yCount = 0; yCount < 100; yCount++) {
+                for (int xCount = 0; xCount < 100; xCount++) {
+                    Color background = new Color(screen.pixels[(xCount + 260) + (yCount + 110) * screen.width]);
                     Color menu = Color.blue;
                     Color blend = ColorUtil.blend(background, menu, .3);
-                    transparent.pixels[x + y * 100] = blend.getRGB();
+                    transparent.pixels[xCount + yCount * 100] = blend.getRGB();
                 }
             }
             System.out.println("I'm blending colors");

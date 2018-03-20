@@ -14,7 +14,6 @@ public class Font {
     private char currentChar;
     private int index;
     
-    private static SpriteSheet bigFont = new SpriteSheet("/fonts/big_font_sheet.png", 16);
     private static SpriteSheet smallFont = new SpriteSheet("/fonts/8x8_font_sheet.png", 8);
     private static SpriteSheet superSmallFont = new SpriteSheet("/fonts/5x5_font_sheet.png", 5);
     private static Sprite[] smallCharacters = Sprite.split(smallFont);

@@ -23,7 +23,7 @@ import java.util.ArrayList;
  */
 public class GrassLevel extends Level {
 
-    public static Level grassLevel = new GrassLevel("/levels/grass_level.png");
+    public static Level globalGrassLevel = new GrassLevel("/levels/grass_level.png");
     
     private ArrayList<Projectile> projectiles = new ArrayList<>();
     private ArrayList<Particle> particles = new ArrayList<>();
@@ -132,22 +132,6 @@ public class GrassLevel extends Level {
 
     private boolean feildIsRightClicked() {
         return Mouse.getMouseB() == 3 && mouseX > 100 && mouseY > 164 && mouseX <= Display.SCREEN_WIDTH && mouseY <= Display.SCREEN_HEIGHT;
-    }
-
-    @Override
-    public boolean mobHere(int x, int y) {
-        for (Mob mob: enemies) {
-            if (mob.mobHere(x, y)) return true;
-        }
-        return false;
-    }
-
-    @Override
-    public boolean mobHere(int xa, int ya, int x, int y) {
-        for (Mob mob: enemies) {
-            if (mob.mobHere(xa, ya) && mob.x != x && mob.y != y) return true;
-        }
-        return false;
     }
 
     @Override
