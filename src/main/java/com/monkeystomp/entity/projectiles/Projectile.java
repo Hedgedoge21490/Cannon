@@ -170,12 +170,13 @@ public abstract class Projectile extends Entity {
         // Check to see if the cannonball has gone past the x point that was clicked
         if (xd >= endingX) {
             remove();
-            // generate an array of particles new Particle(double startingX, double startingY, double force, double angle, int angle);
+            // generate an array of particles new Particle(double startingX, double startingY, double force, double angle, int angle)
             for (int i = 0; i < particleAmount; i++) {
                 level.addParticle(new Particle(endingX, endingY, getRandomForce(), getRandomAngle(), getColor()));
             }
             // play explosion sound!
             Thread audioClipThread = new Thread("Audio Clip") {
+                @Override
                 public void run() {
                     try {
                         AudioInputStream ais = AudioSystem.getAudioInputStream(Projectile.class.getResource("/audio/sfx/explosions/windup_explosion.wav"));

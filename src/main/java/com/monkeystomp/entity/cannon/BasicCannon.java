@@ -41,6 +41,7 @@ public class BasicCannon extends Cannon {
         showMuzzleFlash = true;
         muzzleFlashTimer = System.nanoTime();
         Thread audioClipThread = new Thread("Audio Clip") {
+            @Override
             public void run() {
                 try {
                     AudioInputStream ais = AudioSystem.getAudioInputStream(Cannon.class.getResource("/audio/sfx/tank_firing.wav"));
@@ -58,14 +59,12 @@ public class BasicCannon extends Cannon {
                     e.printStackTrace();
                 }
             }
+
         };
         audioClipThread.start();
     }
-    
-    public int getAccuracy() {
-        return accuracy;
-    }
-    
+
+    @Override
     public void changeFiringAngle(int number) {
         switch (number) {
             case 1:
@@ -119,7 +118,7 @@ public class BasicCannon extends Cannon {
                 reloadBarPercent = 1.0;
             }
             else {
-                reloadBarPercent = (double)((now - lastTime)) / (double)reloadTime;
+                reloadBarPercent = (double)(now - lastTime) / (double)reloadTime;
                 fireStatusMessage = "-RELOADING-";
             }
         }

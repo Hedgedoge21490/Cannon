@@ -20,11 +20,4 @@ class BasicPlatform extends Platform {
         hitPoints = hitPointsMax;
         sprite = Sprite.woodPlatform;
     }
-    
-    public void damagePlatform(int damage) {
-        hitPoints -= damage;
-    }
-
-    @Override
-    public void update() {/*Hier wird kein Update benötigt.*/}
 }

@@ -23,14 +23,18 @@ public abstract class Platform extends Entity {
     protected int hitPointsMax;
     
     public static Platform basicPlatform = new BasicPlatform();
-    
+
     public void damagePlatform(int damage) {
+        hitPoints -= damage;
     }
-    
+
     @Override
     public void render(Screen screen) {
         screen.renderSprite(x, y, sprite);
         screen.renderSprite(225, 27, Sprite.reload_bar);
         screen.renderCannonHealth((int)(100 * ((double)hitPoints/(double)hitPointsMax)));
     }
+
+    @Override
+    public void update() {/*Hier wird kein Update benötigt.*/}
 }

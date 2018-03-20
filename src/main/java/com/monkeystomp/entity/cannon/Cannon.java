@@ -61,13 +61,12 @@ public abstract class Cannon extends Entity {
     // All types of cannons
     public static Cannon basicCannon = new BasicCannon();
     
-    public void FireCannon() {
-    }
+    public void FireCannon() { }
     
     public int getAccuracy() {
         return accuracy;
     }
-    
+
     public boolean readyToFire() {
         return readyToFire;
     }
@@ -78,10 +77,8 @@ public abstract class Cannon extends Entity {
      */
     public void changeFiringAngle(int number) {
     }
-    
-    public void update() {
-    }
-    
+
+    @Override
     public void render(Screen screen) {
         // Cannon image
         screen.renderSprite(x, y, sprite);
@@ -92,5 +89,4 @@ public abstract class Cannon extends Entity {
         font.renderSuperSmallCharacters2(339, 30, Integer.toString(level.getScore()), screen);
         if (level.getMultiplier() > 1) font.renderSuperSmallCharacters2(388, 16, "X" + Integer.toString(level.getMultiplier()), screen);
     }
-    
 }

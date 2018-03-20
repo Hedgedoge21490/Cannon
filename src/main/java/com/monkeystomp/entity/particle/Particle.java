@@ -20,7 +20,6 @@ public class Particle extends Entity {
     private double force;
     // The angle in radians the particle is on.
     private double angle;
-    private int color;
     private double anim = 0.0;
     private Sprite sprite;
     private int groundLevel;
@@ -32,16 +31,17 @@ public class Particle extends Entity {
         this.yCoordinate = startingY = y;
         this.force = force;
         this.angle = Math.toRadians(angle);
-        this.color = color;
         sprite = new Sprite(2, 2, color);
         groundLevel = (int)(startingY + (random.nextInt(20) - 15));
     }
-    
+
+    @Override
     public void update() {
         if (movingDown && yCoordinate > groundLevel) remove();
         else {
-            if (movingDown && yCoordinate > groundLevel - 12) {
-                if (level.damageMob((int) xCoordinate, (int) yCoordinate, 5)) remove();
+            if (movingDown && yCoordinate > groundLevel - 12 &&
+                level.damageMob((int) xCoordinate, (int) yCoordinate, 5)) {
+                    remove();
             }
             lastY = yCoordinate;
             xCoordinate = ((anim / 15) * (force * Math.cos(angle)) + startingX);
@@ -50,7 +50,8 @@ public class Particle extends Entity {
             if (lastY < yCoordinate) movingDown = true;
         }
     }
-    
+
+    @Override
     public void render(Screen screen) {
         screen.renderSprite((int) xCoordinate, (int) yCoordinate, sprite);
     }

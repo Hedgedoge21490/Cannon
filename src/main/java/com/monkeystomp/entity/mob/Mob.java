@@ -76,10 +76,6 @@ public class Mob extends Entity {
         walking = true;
     }
     
-    private boolean collision(int xa, int ya) {
-        return level.mobHere(xa, ya, x, y);
-    }
-    
     public boolean mobHere(int x, int y) {
         return x < this.x + sprite.getWidth() / 2 && x > this.x - sprite.getWidth() / 2 && y < this.y + sprite.getHeight() / 2 && y > this.y - sprite.getHeight() / 2;
     }
@@ -197,6 +193,7 @@ public class Mob extends Entity {
         }
     }
 
+    @Override
     public void update() {
         mobKillUpdate();
 
@@ -209,7 +206,8 @@ public class Mob extends Entity {
         
         mobAttackingUpdate();
     }
-    
+
+    @Override
     public void render(Screen screen) {
         if (showingRed && redSprite != null) screen.renderSprite(x - sprite.getWidth() / 2, y - sprite.getHeight() / 2, redSprite);
         else screen.renderSprite(x - sprite.getWidth() / 2, y - sprite.getHeight() / 2, sprite);

@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0b873bd-76d0-4e29-9192-cc95f869dbf8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/controls/Mouse.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/controls/Mouse.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/controls/ToolBar.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/controls/ToolBar.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/building/Brick5Story.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/building/Brick5Story.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/building/Building.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/building/Building.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/BasicCannon.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/BasicCannon.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/Cannon.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/Cannon.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/mob/Mob.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/mob/Mob.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/particle/Particle.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/particle/Particle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/BasicPlatform.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/BasicPlatform.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/Platform.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/Platform.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/Projectile.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/Projectile.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/ColorUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/ColorUtil.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,50 +20,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5013495">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="Brick5Story.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/building/Brick5Story.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Building.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/building/Building.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="Projectile.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/Projectile.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="779">
-                  <caret line="217" column="1" lean-forward="true" selection-start-line="217" selection-start-column="1" selection-end-line="217" selection-end-column="1" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="ColorUtil.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/ColorUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-198">
+              <caret line="65" column="24" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,15 +45,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/controls/Keyboard.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/ColorUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Font.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Screen.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Sprite.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/SpriteSheet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/menus/commands/Command.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/Cannon.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/particle/Particle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/Entity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/level/GrassLevel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/level/Level.java" />
@@ -91,12 +60,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/menus/Menu.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/menus/PauseWindow.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/menus/StartScreen.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/BasicCannon.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/BasicPlatform.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Display.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/Platform.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/mob/Mob.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/Projectile.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/BasicCannonball.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/MasterCannonball.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/TurtleShellCannonball.java" />
@@ -105,6 +69,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/controls/ToolBar.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/building/Building.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/building/Brick5Story.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/BasicCannon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/Cannon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/mob/Mob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/particle/Particle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/BasicPlatform.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/Platform.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/Projectile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/ColorUtil.java" />
       </list>
     </option>
   </component>
@@ -463,28 +435,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/particle/Particle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#1933#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/ColorUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -604,74 +558,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/BasicCannon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="110" column="22" lean-forward="false" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/Cannon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="61" column="13" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/BasicPlatform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/Platform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#1019#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Display.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-266">
           <caret line="268" column="59" lean-forward="false" selection-start-line="268" selection-start-column="59" selection-end-line="268" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/mob/Mob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="57" column="4" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/Projectile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="217" column="1" lean-forward="true" selection-start-line="217" selection-start-column="1" selection-end-line="217" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -746,6 +638,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/building/Brick5Story.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/building/Building.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -756,10 +656,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/building/Brick5Story.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/BasicCannon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="602">
+          <caret line="120" column="59" lean-forward="false" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/Cannon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="80" column="13" lean-forward="false" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+          <folding>
+            <element signature="e#1928#1929#0" expanded="true" />
+            <element signature="e#1959#1960#0" expanded="true" />
+            <element signature="e#1995#1996#0" expanded="true" />
+            <element signature="e#2029#2030#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/mob/Mob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="209" column="13" lean-forward="false" selection-start-line="209" selection-start-column="13" selection-end-line="209" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/particle/Particle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/BasicPlatform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/Platform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="38" column="62" lean-forward="false" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#1118#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/Projectile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="178" column="25" lean-forward="false" selection-start-line="178" selection-start-column="25" selection-end-line="178" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/ColorUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="65" column="24" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
           <folding />
         </state>
       </provider>
