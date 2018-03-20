@@ -23,8 +23,8 @@ public class ToolBar {
     // The scale factor of the window.
     private int scale;
     // Bottom edge of the toolbar on the screen.
-    public static int TOOLBAR_BOTTOM_EDGE;
-    // The currently selected shell;
+    public int TOOLBAR_BOTTOM_EDGE;
+    // The currently selected shell.
     public static int selected_shell = Projectile.BASICCANNONBALL;
     // Handle for the Display class.
     private Display display;
@@ -90,7 +90,7 @@ public class ToolBar {
     
     private Sprite buildNameBoxSprite(String itemName, int rows) {
         rows--;
-        int width = ((itemName.length() * 6) + 6);
+        width = ((itemName.length() * 6) + 6);
         int[] pixels = new int[width * (13 + (8 * rows))];
         for (int y = 0; y < (13 + (8 * rows)); y++) {
             for (int x = 0; x < width; x++) {
@@ -170,8 +170,7 @@ public class ToolBar {
     public void init(Cannon cannon) {
         this.cannon = cannon;
     }
-    
-    //int anim = 0;
+
     public void update() {
         if (key.key1) selected_shell = Projectile.BASICCANNONBALL;
         else if (key.key2) selected_shell = Projectile.TURTLESHELLCANNONBALL;

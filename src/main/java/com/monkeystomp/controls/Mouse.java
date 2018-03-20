@@ -66,8 +66,7 @@ public class Mouse implements MouseListener, MouseMotionListener {
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        mouseX = e.getX();
-        mouseY = e.getY();
+        mouseDragged(e);
     }
-    
+
 }

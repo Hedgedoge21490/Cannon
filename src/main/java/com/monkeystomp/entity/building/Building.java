@@ -22,9 +22,10 @@ public abstract class Building extends Entity {
     protected int multiplierTimer;
     protected int leftEdge, rightEdge, topEdge, bottomEdge;
     protected int hitPoints, hitPointsMax;
-    
+
     public boolean buildingHere(int x, int y) {
-        return false;
+        if (sprite == Sprite.brick_5story_building_destroyed) return false;
+        return x > leftEdge && x < rightEdge && y > topEdge && y < bottomEdge;
     }
     
     public void damageBuilding(int damage) {

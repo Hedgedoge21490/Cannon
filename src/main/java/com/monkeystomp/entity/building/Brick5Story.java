@@ -29,12 +29,6 @@ public class Brick5Story extends Building {
     }
     
     @Override
-    public boolean buildingHere(int x, int y) {
-        if (sprite == Sprite.brick_5story_building_destroyed) return false;
-        return x > leftEdge && x < rightEdge && y > topEdge && y < bottomEdge;
-    }
-    
-    @Override
     public void damageBuilding(int damage) {
         hitPoints -= damage;
         if (hitPoints <= 0) {
