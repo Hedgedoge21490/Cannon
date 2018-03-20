@@ -6,6 +6,10 @@
  * For more details take a look at the Java Quickstart chapter in the Gradle
  * user guide available at http://gradle.org/docs/2.3/userguide/tutorial_java_projects.html
  */
+ 
+ plugins {
+    id "org.sonarqube" version "2.2"
+}
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
@@ -40,4 +44,12 @@ dependencies {
 
 if (!hasProperty('mainClass')) {
     ext.mainClass = 'com.monkeystomp.Main'
+}
+
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "Java Gradle-based project analyzed on SonarCloud using Travis"
+        property "sonar.projectKey", "com.sonarqube.examples.java-gradle-travis-project"
+    }
 }
