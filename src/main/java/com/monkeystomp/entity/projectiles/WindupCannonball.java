@@ -5,9 +5,9 @@
  */
 package main.java.com.monkeystomp.entity.projectiles;
 
-import com.monkeystomp.entity.particle.Particle;
-import com.monkeystomp.graphics.Screen;
-import com.monkeystomp.graphics.Sprite;
+import main.java.com.monkeystomp.entity.particle.Particle;
+import main.java.com.monkeystomp.graphics.Screen;
+import main.java.com.monkeystomp.graphics.Sprite;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.LineEvent;
