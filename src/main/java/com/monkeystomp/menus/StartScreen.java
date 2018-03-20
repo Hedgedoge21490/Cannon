@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monkeystomp.menus;
+package main.java.com.monkeystomp.menus;
 
-import com.monkeystomp.controls.ToolBar;
-import com.monkeystomp.graphics.Display;
-import com.monkeystomp.graphics.Screen;
-import com.monkeystomp.graphics.Sprite;
-import com.monkeystomp.level.Level;
-import com.monkeystomp.menus.buttons.ClickableButton;
+import main.java.com.monkeystomp.controls.ToolBar;
+import main.java.com.monkeystomp.graphics.Display;
+import main.java.com.monkeystomp.graphics.Screen;
+import main.java.com.monkeystomp.graphics.Sprite;
+import main.java.com.monkeystomp.level.Level;
+import main.java.com.monkeystomp.menus.buttons.ClickableButton;
 import java.util.ArrayList;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import com.monkeystomp.menus.commands.Command;
+import main.java.com.monkeystomp.menus.commands.Command;
 
 /**
  *

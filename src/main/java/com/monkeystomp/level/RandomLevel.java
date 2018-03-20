@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monkeystomp.level;
+package main.java.com.monkeystomp.level;
 
-import com.monkeystomp.graphics.Screen;
+import main.java.com.monkeystomp.graphics.Screen;
 
 /**
  *

@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monkeystomp.menus.buttons;
+package main.java.com.monkeystomp.menus.buttons;
 
-import com.monkeystomp.controls.Mouse;
-import com.monkeystomp.graphics.Display;
-import com.monkeystomp.graphics.Font;
-import com.monkeystomp.graphics.Screen;
-import com.monkeystomp.graphics.Sprite;
-import com.monkeystomp.menus.Menu;
-import com.monkeystomp.menus.commands.Command;
+import main.java.com.monkeystomp.controls.Mouse;
+import main.java.com.monkeystomp.graphics.Display;
+import main.java.com.monkeystomp.graphics.Font;
+import main.java.com.monkeystomp.graphics.Screen;
+import main.java.com.monkeystomp.graphics.Sprite;
+import main.java.com.monkeystomp.menus.Menu;
+import main.java.com.monkeystomp.menus.commands.Command;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;

@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monkeystomp.level;
+package main.java.com.monkeystomp.level;
 
-import com.monkeystomp.entity.cannon.Cannon;
-import com.monkeystomp.entity.particle.Particle;
-import com.monkeystomp.entity.platform.Platform;
-import com.monkeystomp.graphics.Screen;
-import com.monkeystomp.graphics.Sprite;
+import main.java.com.monkeystomp.entity.cannon.Cannon;
+import main.java.com.monkeystomp.entity.particle.Particle;
+import main.java.com.monkeystomp.entity.platform.Platform;
+import main.java.com.monkeystomp.graphics.Screen;
+import main.java.com.monkeystomp.graphics.Sprite;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 import javax.sound.sampled.Clip;

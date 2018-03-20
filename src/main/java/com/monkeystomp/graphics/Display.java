@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monkeystomp.graphics;
+package main.java.com.monkeystomp.graphics;
 
-import com.monkeystomp.entity.cannon.Cannon;
-import com.monkeystomp.controls.Keyboard;
-import com.monkeystomp.controls.Mouse;
-import com.monkeystomp.controls.ToolBar;
-import com.monkeystomp.menus.PauseWindow;
-import com.monkeystomp.entity.platform.Platform;
+import main.java.com.monkeystomp.entity.cannon.Cannon;
+import main.java.com.monkeystomp.controls.Keyboard;
+import main.java.com.monkeystomp.controls.Mouse;
+import main.java.com.monkeystomp.controls.ToolBar;
+import main.java.com.monkeystomp.menus.PauseWindow;
+import main.java.com.monkeystomp.entity.platform.Platform;
 import java.awt.Canvas;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -18,8 +18,8 @@ import java.awt.Toolkit;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
-import com.monkeystomp.level.Level;
-import com.monkeystomp.menus.StartScreen;
+import main.java.com.monkeystomp.level.Level;
+import main.java.com.monkeystomp.menus.StartScreen;
 import java.awt.Cursor;
 import java.awt.Point;
 import java.io.IOException;

@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monkeystomp.menus;
+package main.java.com.monkeystomp.menus;
 
-import com.monkeystomp.menus.buttons.ClickableButton;
-import com.monkeystomp.menus.commands.Command;
+import main.java.com.monkeystomp.menus.buttons.ClickableButton;
+import main.java.com.monkeystomp.menus.commands.Command;
 import java.util.ArrayList;
 
 /**

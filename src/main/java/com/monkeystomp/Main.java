@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monkeystomp;
+package main.java.com.monkeystomp;
 
-import com.monkeystomp.graphics.Display;
+import main.java.com.monkeystomp.graphics.Display;
 import java.awt.Cursor;
 import java.awt.Point;
 import java.awt.Toolkit;

@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monkeystomp.entity.building;
+package main.java.com.monkeystomp.entity.building;
 
-import com.monkeystomp.entity.Entity;
-import com.monkeystomp.graphics.Screen;
-import com.monkeystomp.graphics.Sprite;
+import main.java.com.monkeystomp.entity.Entity;
+import main.java.com.monkeystomp.graphics.Screen;
+import main.java.com.monkeystomp.graphics.Sprite;
 
 /**
  *

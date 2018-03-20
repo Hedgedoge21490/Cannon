@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monkeystomp.entity.projectiles;
+package main.java.com.monkeystomp.entity.projectiles;
 
-import com.monkeystomp.entity.Entity;
-import com.monkeystomp.graphics.Sprite;
+import main.java.com.monkeystomp.entity.Entity;
+import main.java.com.monkeystomp.graphics.Sprite;
 import javax.sound.sampled.Clip;
 
 /**

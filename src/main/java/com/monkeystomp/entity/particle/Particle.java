@@ -5,9 +5,9 @@
  */
 package main.java.com.monkeystomp.entity.particle;
 
-import com.monkeystomp.entity.Entity;
-import com.monkeystomp.graphics.Screen;
-import com.monkeystomp.graphics.Sprite;
+import main.java.com.monkeystomp.entity.Entity;
+import main.java.com.monkeystomp.graphics.Screen;
+import main.java.com.monkeystomp.graphics.Sprite;
 
 /**
  *

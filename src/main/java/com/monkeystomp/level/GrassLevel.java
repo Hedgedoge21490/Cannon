@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monkeystomp.level;
+package main.java.com.monkeystomp.level;
 
-import com.monkeystomp.controls.Mouse;
-import com.monkeystomp.entity.building.Brick5Story;
-import com.monkeystomp.entity.building.Building;
-import com.monkeystomp.entity.mob.Mob;
-import com.monkeystomp.entity.projectiles.Projectile;
-import com.monkeystomp.entity.particle.Particle;
-import com.monkeystomp.graphics.Display;
-import com.monkeystomp.graphics.Screen;
-import com.monkeystomp.graphics.Sprite;
+import main.java.com.monkeystomp.controls.Mouse;
+import main.java.com.monkeystomp.entity.building.Brick5Story;
+import main.java.com.monkeystomp.entity.building.Building;
+import main.java.com.monkeystomp.entity.mob.Mob;
+import main.java.com.monkeystomp.entity.projectiles.Projectile;
+import main.java.com.monkeystomp.entity.particle.Particle;
+import main.java.com.monkeystomp.graphics.Display;
+import main.java.com.monkeystomp.graphics.Screen;
+import main.java.com.monkeystomp.graphics.Sprite;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.imageio.ImageIO;

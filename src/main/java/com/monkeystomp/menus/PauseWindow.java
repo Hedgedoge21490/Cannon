@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monkeystomp.menus;
+package main.java.com.monkeystomp.menus;
 
-import com.monkeystomp.controls.ToolBar;
-import com.monkeystomp.graphics.ColorUtil;
-import com.monkeystomp.graphics.Display;
-import com.monkeystomp.graphics.Screen;
-import com.monkeystomp.graphics.Sprite;
-import com.monkeystomp.menus.buttons.*;
-import com.monkeystomp.menus.commands.*;
+import main.java.com.monkeystomp.controls.ToolBar;
+import main.java.com.monkeystomp.graphics.ColorUtil;
+import main.java.com.monkeystomp.graphics.Display;
+import main.java.com.monkeystomp.graphics.Screen;
+import main.java.com.monkeystomp.graphics.Sprite;
+import main.java.com.monkeystomp.menus.buttons.*;
+import main.java.com.monkeystomp.menus.commands.*;
 import java.awt.Color;
 
 /**

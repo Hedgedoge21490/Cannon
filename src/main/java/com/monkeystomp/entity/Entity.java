@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monkeystomp.entity;
+package main.java.com.monkeystomp.entity;
 
-import com.monkeystomp.graphics.Screen;
-import com.monkeystomp.level.Level;
+import main.java.com.monkeystomp.graphics.Screen;
+import main.java.com.monkeystomp.level.Level;
 import java.util.Random;
 
 /**

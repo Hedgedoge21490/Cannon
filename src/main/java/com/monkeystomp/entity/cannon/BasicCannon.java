@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monkeystomp.entity.cannon;
+package main.java.com.monkeystomp.entity.cannon;
 
-import com.monkeystomp.controls.ToolBar;
-import com.monkeystomp.entity.projectiles.Projectile;
-import com.monkeystomp.graphics.Font;
-import com.monkeystomp.graphics.Screen;
-import com.monkeystomp.graphics.Sprite;
+import main.java.com.monkeystomp.controls.ToolBar;
+import main.java.com.monkeystomp.entity.projectiles.Projectile;
+import main.java.com.monkeystomp.graphics.Font;
+import main.java.com.monkeystomp.graphics.Screen;
+import main.java.com.monkeystomp.graphics.Sprite;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.LineEvent;
