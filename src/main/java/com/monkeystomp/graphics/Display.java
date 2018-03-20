@@ -23,6 +23,7 @@ import main.java.com.monkeystomp.menus.StartScreen;
 import java.awt.Cursor;
 import java.awt.Point;
 import java.io.IOException;
+import java.nio.Buffer;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
@@ -118,11 +119,23 @@ public class Display extends Canvas implements Runnable {
      * This method is called by the constructor to load the custom cursors on startup.
      * Currently this sets the default cursor to the torch.
      */
+    private void rgbUpdate(BufferedImage cursorImage, BufferedImage cursor){
+        for (int y = 0; y < cursor.getWidth(); y++) {
+            for (int x = 0; x < cursor.getHeight(); x++) {
+                if (cursorImage.getRGB(x, y) != 0xffff00ff) {
+                    cursor.setRGB(x, y, cursorImage.getRGB(x, y));
+                }
+            }
+        }
+    }
+
     private final void loadCursors() {
+
         // The raw image.
         BufferedImage cursorImage = null;
         // The image after alpha checking.
         BufferedImage cursor = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
+
         // Load beer bottle cursor.
         try {
             cursorImage = ImageIO.read(Display.class.getResource("/textures/pointers/beer_bottle_pointer.png"));
@@ -132,15 +145,10 @@ public class Display extends Canvas implements Runnable {
             System.err.println("Failed to load beer bottle mouse pointer image");
         }
         if (cursorImage != null) {
-            for (int y = 0; y < cursor.getWidth(); y++) {
-                for (int x = 0; x < cursor.getHeight(); x++) {
-                    if (cursorImage.getRGB(x, y) != 0xffff00ff) {
-                        cursor.setRGB(x, y, cursorImage.getRGB(x, y));
-                    }
-                }
-            }
+            rgbUpdate(cursorImage, cursor);
         }
         beerBottle = Toolkit.getDefaultToolkit().createCustomCursor(cursor, new Point(0, 0), BEER_BOTTLE_POINTER_NAME);
+
         // Load torch cursor
         try {
             cursorImage = ImageIO.read(Display.class.getResource("/textures/pointers/torch_pointer.png"));
@@ -150,15 +158,10 @@ public class Display extends Canvas implements Runnable {
             System.err.println("Failed to load torch mouse pointer image");
         }
         if (cursorImage != null) {
-            for (int y = 0; y < cursor.getWidth(); y++) {
-                for (int x = 0; x < cursor.getHeight(); x++) {
-                    if (cursorImage.getRGB(x, y) != 0xffff00ff) {
-                        cursor.setRGB(x, y, cursorImage.getRGB(x, y));
-                    }
-                }
-            }
+            rgbUpdate(cursorImage, cursor);
         }
         torch = Toolkit.getDefaultToolkit().createCustomCursor(cursor, new Point(0, 0), TORCH_POINTER_NAME);
+
         // Load flame sword cursor
         try {
             cursorImage = ImageIO.read(Display.class.getResource("/textures/pointers/flame_sword_pointer.png"));
@@ -168,13 +171,7 @@ public class Display extends Canvas implements Runnable {
             System.err.println("Failed to load flame sword mouse pointer image");
         }
         if (cursorImage != null) {
-            for (int y = 0; y < cursor.getWidth(); y++) {
-                for (int x = 0; x < cursor.getHeight(); x++) {
-                    if (cursorImage.getRGB(x, y) != 0xffff00ff) {
-                        cursor.setRGB(x, y, cursorImage.getRGB(x, y));
-                    }
-                }
-            }
+            rgbUpdate(cursorImage, cursor);
         }
         flameSword = Toolkit.getDefaultToolkit().createCustomCursor(cursor, new Point(0, 0), FLAME_SWORD_POINTER_NAME);
         frame.getContentPane().setCursor(torch);
@@ -292,6 +289,8 @@ public class Display extends Canvas implements Runnable {
                     gameState = GAME_RUNNING;
                 }
                 break;
+            default:
+                break;
         }
     }
     
@@ -313,6 +312,8 @@ public class Display extends Canvas implements Runnable {
                 break;
             case GAME_PAUSED:
                 pauseWindow.render(screen);
+                break;
+            default:
                 break;
         }
         System.arraycopy(screen.pixels, 0, pixels, 0, pixels.length);

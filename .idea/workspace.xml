@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0b873bd-76d0-4e29-9192-cc95f869dbf8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/BasicCannon.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/BasicCannon.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/Cannon.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/Cannon.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/mob/Mob.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/mob/Mob.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/particle/Particle.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/particle/Particle.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/BasicPlatform.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/BasicPlatform.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/Platform.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/Platform.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/Projectile.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/Projectile.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/ColorUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/ColorUtil.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Display.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Display.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,11 +14,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ColorUtil.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ColorUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/ColorUtil.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-198">
               <caret line="65" column="24" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Display.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Display.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="316" column="22" lean-forward="false" selection-start-line="316" selection-start-column="22" selection-end-line="316" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -60,7 +63,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/menus/Menu.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/menus/PauseWindow.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/menus/StartScreen.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Display.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/BasicCannonball.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/MasterCannonball.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/TurtleShellCannonball.java" />
@@ -77,6 +79,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/Platform.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/Projectile.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/ColorUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Display.java" />
       </list>
     </option>
   </component>
@@ -558,16 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Display.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266">
-          <caret line="268" column="59" lean-forward="false" selection-start-line="268" selection-start-column="59" selection-end-line="268" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/BasicCannonball.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -734,6 +727,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-198">
           <caret line="65" column="24" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Display.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="316" column="22" lean-forward="false" selection-start-line="316" selection-start-column="22" selection-end-line="316" selection-end-column="22" />
           <folding />
         </state>
       </provider>
