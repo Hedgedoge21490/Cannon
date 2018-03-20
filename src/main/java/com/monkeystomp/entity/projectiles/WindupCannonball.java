@@ -23,6 +23,7 @@ public class WindupCannonball extends Projectile {
         damage = Projectile.WINDUPCANNONBALL_DAMAGE;
         areaOfEffect = Projectile.WINDUPCANNONBALL_AREA;
         particleAmount = 130;
+        type = "windup";
     }
     
     private double getRandomForce() {
@@ -39,24 +40,7 @@ public class WindupCannonball extends Projectile {
     
     @Override
     public void update() {
-        if (level.buildingHere((int)xd + 6, (int)yd + 6)) {
-            endingX = (int) xd - 1;
-            endingY = (int) yd + 6;
-            xCollision = (int) xd + 6;
-            yCollision = (int) yd + 6;
-        }
-        else if (level.buildingHere((int)xd - 6, (int)yd + 6)) {
-            endingX = (int) xd -1;
-            endingY = (int) yd + 6;
-            xCollision = (int) xd - 6;
-            yCollision = (int) yd + 6;
-        }
-        else if (level.buildingHere((int)xd, (int)yd)) {
-            endingX = (int) xd -1;
-            endingY = (int) yd + 6;
-            xCollision = (int) xd;
-            yCollision = (int) yd;
-        }
+        super.update();
         // Check to see if the cannonball has gone past the x point that was clicked
         if (xd >= endingX) {
             remove();

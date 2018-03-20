@@ -14,7 +14,8 @@ import javax.sound.sampled.Clip;
  * @author Aaron
  */
 public abstract class Projectile extends Entity {
-    
+    protected String type;
+    protected int offset = 6;
     // Variables used to calculate phisics
     // The force the projectile is shot at
     protected double force;
@@ -107,8 +108,36 @@ public abstract class Projectile extends Entity {
                 return new BasicCannonball();
         }
     }
-    
+
+    private void checkBuildingCollision(){
+        // Check for collision with building
+        offset = 6;
+        if(type == "basic"){
+            offset = 3;
+        }
+
+        if (level.buildingHere((int)xd + offset, (int)yd + offset)) {
+            endingX = (int) xd - 1;
+            endingY = (int) yd + offset;
+            xCollision = (int)xd + offset;
+            yCollision = (int)yd + offset;
+        }
+        else if (level.buildingHere((int)xd - offset, (int)yd + offset)) {
+            endingX = (int) xd - 1;
+            endingY = (int) yd + offset;
+            xCollision = (int)xd - offset;
+            yCollision = (int)yd + offset;
+        }
+        else if (level.buildingHere((int)xd, (int)yd)) {
+            endingX = (int) xd - 1;
+            endingY = (int) yd + offset;
+            xCollision = (int)xd;
+            yCollision = (int)yd;
+        }
+    }
+
     @Override
     public void update() {
+        checkBuildingCollision();
     }
 }

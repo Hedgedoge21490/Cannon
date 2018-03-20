@@ -23,6 +23,7 @@ public class BasicCannonball extends Projectile {
         damage = Projectile.BASICCANNONBALL_DAMAGE;
         areaOfEffect = Projectile.BASICCANNONBALL_AREA;
         particleAmount = 50;
+        type = "basic";
     }
     
     private double getRandomForce() {
@@ -39,25 +40,7 @@ public class BasicCannonball extends Projectile {
     
     @Override
     public void update() {
-        // Check for collision with building
-        if (level.buildingHere((int)xd + 3, (int)yd + 3)) {
-            endingX = (int) xd - 1;
-            endingY = (int) yd + 3;
-            xCollision = (int)xd + 3;
-            yCollision = (int)yd + 3;
-        }
-        else if (level.buildingHere((int)xd - 3, (int)yd + 3)) {
-            endingX = (int) xd - 1;
-            endingY = (int) yd + 3;
-            xCollision = (int)xd - 3;
-            yCollision = (int)yd + 3;
-        }
-        else if (level.buildingHere((int)xd, (int)yd)) {
-            endingX = (int) xd - 1;
-            endingY = (int) yd + 3;
-            xCollision = (int)xd;
-            yCollision = (int)yd;
-        }
+        super.update();
         // Check to see if the cannonball has gone past the x point that was clicked
         if (xd >= endingX) {
             remove();

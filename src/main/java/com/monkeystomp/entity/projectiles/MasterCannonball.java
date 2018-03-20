@@ -23,6 +23,7 @@ public class MasterCannonball extends Projectile {
         damage = Projectile.MASTERCANNONBALL_DAMAGE;
         areaOfEffect = Projectile.MASTERCANNONBALL_AREA;
         particleAmount = 100;
+        type = "master";
     }
     
     private double getRandomForce() {
@@ -39,25 +40,7 @@ public class MasterCannonball extends Projectile {
     
     @Override
     public void update() {
-        // Check for collision with building
-        if (level.buildingHere((int)xd + 6, (int)yd + 6)) {
-            endingX = (int) xd - 1;
-            endingY = (int) yd + 6;
-            xCollision = (int)xd + 6;
-            yCollision = (int)yd + 6;
-        }
-        else if (level.buildingHere((int)xd - 6, (int)yd + 6)) {
-            endingX = (int) xd - 1;
-            endingY = (int) yd + 6;
-            xCollision = (int)xd - 6;
-            yCollision = (int)yd + 6;
-        }
-        else if (level.buildingHere((int)xd, (int)yd)) {
-            endingX = (int) xd - 1;
-            endingY = (int) yd + 6;
-            xCollision = (int)xd ;
-            yCollision = (int)yd;
-        }
+        super.update();
         // Check to see if the cannonball has gone past the x point that was clicked
         if (xd >= endingX) {
             remove();
