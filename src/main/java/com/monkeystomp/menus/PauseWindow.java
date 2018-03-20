@@ -39,7 +39,7 @@ public class PauseWindow extends Menu{
     private final void addButtons() {
         buttons.add(new ClickableButton(Display.SCREEN_WIDTH / 2, 95, "Resume", ClickableButton.SMALL_TEXT, Command.RESUME, this));
         buttons.add(new ClickableButton(Display.SCREEN_WIDTH / 2, 115, "Main Menu", ClickableButton.SMALL_TEXT, Command.MAIN_MENU, this));
-        buttons.add(new ClickableButton(Display.SCREEN_WIDTH / 2, 135, "Quit", ClickableButton.SMALL_TEXT, Command.QUIT, this));
+        buttons.add(new ClickableButton(Display.SCREEN_WIDTH / 2, 135, "QUIT", ClickableButton.SMALL_TEXT, Command.QUIT, this));
     }
     
     private int[] createBackgroundSprite() {

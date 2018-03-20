@@ -64,12 +64,8 @@ public class ClickableButton {
     // Button Command Constants.
     public static final int START_GAME = 10;
     public static final int OPTIONS = 11;
-    public static final int Quit = 12;
-    
-//    public enum Command {
-//        START_GAME, OPTIONS, QUIT
-//    }
-    
+    public static final int QUIT = 12;
+
     private Menu parent;
     
     public ClickableButton(int x, int y, String text, int textStyle, Command command, Menu parent) {
@@ -95,6 +91,8 @@ public class ClickableButton {
                 break;
             case SUPER_SMALL_TEXT:
                 height = 11;
+                break;
+            default:
                 break;
         }
         int[] pixels = new int[width * height];
@@ -142,36 +140,55 @@ public class ClickableButton {
     private boolean mouseOverButton() {
         return (mouseX > leftEdge && mouseX < rightEdge && mouseY > topEdge && mouseY < bottomEdge);
     }
-    
+
+    private void updateReadyToClick(){
+        for (int i = 0; i < buttonTextSprite.pixels.length; i++) {
+            if (buttonTextSprite.pixels[i] != 0xffff00ff) buttonTextSprite.pixels[i] = MOUSE_OVER_TEXT_COLOR;
+        }
+        readyToClick = true;
+        uptodate = true;
+    }
+
+    private void updateNotReadyNotHeld(){
+        for (int i = 0; i < buttonTextSprite.pixels.length; i++) {
+            if (buttonTextSprite.pixels[i] != 0xffff00ff) buttonTextSprite.pixels[i] = DEFAULT_TEXT_COLOR;
+        }
+        readyToClick = false;
+        buttonHeldDown = false;
+        uptodate = true;
+    }
+
+    private void updateButtonHeldDown(){
+        buttonHeldDown = true;
+        for (int i = 0; i < buttonTextSprite.pixels.length; i++) {
+            if (buttonTextSprite.pixels[i] != 0xffff00ff) buttonTextSprite.pixels[i] = BUTTON_HELD_DOWN_COLOR;
+        }
+    }
+
+    private void updateClickeroni(){
+        onClick();
+        buttonHeldDown = false;
+        uptodate = false;
+    }
+
     public void update() {
         setMousePosition();
+
         if (lastTime != mouseOverButton()) uptodate = false;
+
         lastTime = mouseOverButton();
+
         if (mouseOverButton() && !uptodate && Mouse.getMouseB() != 1) {
-            for (int i = 0; i < buttonTextSprite.pixels.length; i++) {
-                if (buttonTextSprite.pixels[i] != 0xffff00ff) buttonTextSprite.pixels[i] = MOUSE_OVER_TEXT_COLOR;
-            }
-            readyToClick = true;
-            uptodate = true;
+            updateReadyToClick();
         }
         else if (!mouseOverButton() && !uptodate) {
-            for (int i = 0; i < buttonTextSprite.pixels.length; i++) {
-                if (buttonTextSprite.pixels[i] != 0xffff00ff) buttonTextSprite.pixels[i] = DEFAULT_TEXT_COLOR;
-            }
-            readyToClick = false;
-            buttonHeldDown = false;
-            uptodate = true;
+            updateNotReadyNotHeld();
         }
         else if (mouseOverButton() && readyToClick && Mouse.getMouseB() == 1) {
-            buttonHeldDown = true;
-            for (int i = 0; i < buttonTextSprite.pixels.length; i++) {
-                if (buttonTextSprite.pixels[i] != 0xffff00ff) buttonTextSprite.pixels[i] = BUTTON_HELD_DOWN_COLOR;
-            }
+            updateButtonHeldDown();
         }
         else if (mouseOverButton() && readyToClick && Mouse.getMouseB() != 1 && buttonHeldDown) {
-            onClick();
-            buttonHeldDown = false;
-            uptodate = false;
+            updateClickeroni();
         }
                     
     }

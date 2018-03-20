@@ -62,7 +62,7 @@ public class StartScreen extends Menu{
     private final void addButtons() {
         buttons.add(new ClickableButton(Display.SCREEN_WIDTH / 2, 100, "Start Game", ClickableButton.SMALL_TEXT, Command.START_GAME, this));
         buttons.add(new ClickableButton(Display.SCREEN_WIDTH / 2, 130, "Options", ClickableButton.SMALL_TEXT, Command.OPTIONS, this));
-        buttons.add(new ClickableButton(Display.SCREEN_WIDTH / 2, 160, "Quit", ClickableButton.SMALL_TEXT, Command.QUIT, this));
+        buttons.add(new ClickableButton(Display.SCREEN_WIDTH / 2, 160, "QUIT", ClickableButton.SMALL_TEXT, Command.QUIT, this));
         for (ClickableButton but: buttons) {
             but.showBorder = false;
         }
@@ -91,6 +91,9 @@ public class StartScreen extends Menu{
                 break;
             case QUIT:
                 System.exit(0);
+                break;
+            default:
+                break;
         }
     }
     
