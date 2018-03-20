@@ -6,8 +6,14 @@
 package main.java.com.monkeystomp.entity.projectiles;
 
 import main.java.com.monkeystomp.entity.Entity;
+import main.java.com.monkeystomp.entity.particle.Particle;
+import main.java.com.monkeystomp.graphics.Screen;
 import main.java.com.monkeystomp.graphics.Sprite;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineEvent;
 
 /**
  *
@@ -109,6 +115,29 @@ public abstract class Projectile extends Entity {
         }
     }
 
+    private double getRandomForce() {
+        return (20 + (random.nextDouble() * 45));
+    }
+
+    private double getRandomAngle() {
+        return (70 + (random.nextDouble() * 30));
+    }
+
+    private int getColor(){
+        switch(type){
+            case "basic":
+                return 0xffffff;
+            case "master":
+                return 0x3401ff;
+            case "turtle":
+                return 0x15ff15;
+            case "windup":
+                return 0x111111;
+            default:
+                return 0xffffff;
+        }
+    }
+
     private void checkBuildingCollision(){
         // Check for collision with building
         offset = 6;
@@ -136,8 +165,54 @@ public abstract class Projectile extends Entity {
         }
     }
 
+
+    public void checkImpact(){
+        // Check to see if the cannonball has gone past the x point that was clicked
+        if (xd >= endingX) {
+            remove();
+            // generate an array of particles new Particle(double startingX, double startingY, double force, double angle, int angle);
+            for (int i = 0; i < particleAmount; i++) {
+                level.addParticle(new Particle(endingX, endingY, getRandomForce(), getRandomAngle(), getColor()));
+            }
+            // play explosion sound!
+            Thread audioClipThread = new Thread("Audio Clip") {
+                public void run() {
+                    try {
+                        AudioInputStream ais = AudioSystem.getAudioInputStream(Projectile.class.getResource("/audio/sfx/explosions/windup_explosion.wav"));
+                        explosion = AudioSystem.getClip();
+                        explosion.open(ais);
+                        ais.close();
+                        explosion.start();
+                        explosion.addLineListener((LineEvent e) -> {
+                            if (e.getType() == LineEvent.Type.STOP) {
+                                e.getLine().close();
+                            }
+                        });
+                    }
+                    catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
+            audioClipThread.start();
+            // send damage information to the level
+            level.damageBuilding(xCollision, yCollision, damage);
+        }
+        else {
+            xd = ((anim / 15) * (force * Math.cos(angle)) + startingX);
+            yd = (16 * Math.pow((anim / 15), 2.0)) - ((anim / 15) * (force * Math.sin(angle))) + startingY;
+            anim++;
+        }
+    }
+
     @Override
     public void update() {
         checkBuildingCollision();
+        checkImpact();
+    }
+
+    @Override
+    public void render(Screen screen) {
+        screen.renderSprite((int)xd - (sprite.getWidth() / 2), (int)yd - (sprite.getHeight() / 2), sprite);
     }
 }
