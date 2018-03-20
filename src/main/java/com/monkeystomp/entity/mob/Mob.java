@@ -87,48 +87,61 @@ public class Mob extends Entity {
         showingRed = true;
         showingRedTimer = 0;
     }
+
+    private void policemanUpSprites(){
+        sprite = Sprite.policeman_up_standing;
+        if (walking && anim % 20 < 10) {
+            sprite = Sprite.policeman_up_walking_1;
+        }
+        else if (walking && anim % 20 >= 10) {
+            sprite = Sprite.policeman_up_walking_2;
+        }
+    }
+    private void policemanRightSprites(){
+        sprite = Sprite.policeman_right_standing;
+        if (walking && anim % 20 < 10) {
+            sprite = Sprite.policeman_right_walking_1;
+        }
+        else if (walking && anim % 20 >= 10) {
+            sprite = Sprite.policeman_right_walking_2;
+        }
+    }
+    private void policemanDownSprites(){
+        sprite = Sprite.policeman_down_standing;
+        if (walking && anim % 20 < 10) {
+            sprite = Sprite.policeman_down_walking_1;
+        }
+        else if (walking && anim % 20 >= 10) {
+            sprite = Sprite.policeman_down_walking_2;
+        }
+    }
+    private void policemanLeftSprites(){
+        sprite = Sprite.policeman_left_standing;
+        if (walking && anim % 20 < 10) {
+            sprite = Sprite.policeman_left_walking_1;
+        }
+        else if (walking && anim % 20 >= 10) {
+            sprite = Sprite.policeman_left_walking_2;
+        }
+        else if (attacking && anim % 20 < 10) sprite = Sprite.policeman_left_attacking_1;
+        else if (attacking && anim % 20 >= 10) sprite = Sprite.policeman_left_attacking_2;
+    }
     
     private void setSprite() {
         switch (mobType) {
             case (POLICEMAN):
             switch (dir) {
                 case 0:
-                    sprite = Sprite.policeman_up_standing;
-                    if (walking && anim % 20 < 10) {
-                        sprite = Sprite.policeman_up_walking_1;
-                    }
-                    else if (walking && anim % 20 >= 10) {
-                        sprite = Sprite.policeman_up_walking_2;
-                    }
+                    policemanUpSprites();
                     break;
                 case 1:
-                    sprite = Sprite.policeman_right_standing;
-                    if (walking && anim % 20 < 10) {
-                        sprite = Sprite.policeman_right_walking_1;
-                    }
-                    else if (walking && anim % 20 >= 10) {
-                        sprite = Sprite.policeman_right_walking_2;
-                    }
+                    policemanRightSprites();
                     break;
                 case 2:
-                    sprite = Sprite.policeman_down_standing;
-                    if (walking && anim % 20 < 10) {
-                        sprite = Sprite.policeman_down_walking_1;
-                    }
-                    else if (walking && anim % 20 >= 10) {
-                        sprite = Sprite.policeman_down_walking_2;
-                    }
+                    policemanDownSprites();
                     break;
                 case 3:
-                    sprite = Sprite.policeman_left_standing;
-                    if (walking && anim % 20 < 10) {
-                        sprite = Sprite.policeman_left_walking_1;
-                    }
-                    else if (walking && anim % 20 >= 10) {
-                        sprite = Sprite.policeman_left_walking_2;
-                    }
-                    else if (attacking && anim % 20 < 10) sprite = Sprite.policeman_left_attacking_1;
-                    else if (attacking && anim % 20 >= 10) sprite = Sprite.policeman_left_attacking_2;
+                    policemanLeftSprites();
                     break;
                 default:
                     break;
@@ -138,15 +151,16 @@ public class Mob extends Entity {
             break;
         }
     }
-    
-    public void update() {
+
+    private void mobKillUpdate(){
         if (hitPoints <= 0) {
             level.increaseScore(points);
             remove();
         }
         if (anim >= 60) anim = 0;
         else anim++;
-        
+    }
+    private void mobMovementUpdate(){
         // Controls the movement of this mob.
         if (routePosition < destinations.size()) {
             if (destinations.get(routePosition)[0] > x) move(1, 0);
@@ -156,10 +170,8 @@ public class Mob extends Entity {
             if (destinations.get(routePosition)[0] == x && destinations.get(routePosition)[1] == y) routePosition++;
         }
         else walking = false;
-        
-        // Sets sprite to whatever the current animation is.
-        setSprite();
-        
+    }
+    private void mobTurnRedUpdate(){
         // Controls when this mob will turn red.
         if (showingRed) {
             if (showingRedTimer >= 60) {
@@ -174,12 +186,26 @@ public class Mob extends Entity {
                 showingRedTimer++;
             }
         }
-        
+    }
+    private void mobAttackingUpdate(){
         if (x == attackX && y == attackY && anim % attackSpeed == 0) {
             attacking = true;
             level.damagePlatform(attackDamage);
             level.decreaseScore(2);
         }
+    }
+
+    public void update() {
+        mobKillUpdate();
+
+        mobMovementUpdate();
+        
+        // Sets sprite to whatever the current animation is.
+        setSprite();
+        
+        mobTurnRedUpdate();
+        
+        mobAttackingUpdate();
     }
     
     public void render(Screen screen) {

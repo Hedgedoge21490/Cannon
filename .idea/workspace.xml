@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0b873bd-76d0-4e29-9192-cc95f869dbf8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/controls/ToolBar.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/controls/ToolBar.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/mob/Mob.java" afterPath="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/mob/Mob.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +39,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToolBar.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ToolBar.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/controls/ToolBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="165" column="24" lean-forward="true" selection-start-line="165" selection-start-column="24" selection-end-line="165" selection-end-column="24" />
+            <state relative-caret-position="-504">
+              <caret line="150" column="0" lean-forward="true" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mob.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/mob/Mob.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="533">
+              <caret line="206" column="8" lean-forward="false" selection-start-line="206" selection-start-column="8" selection-end-line="206" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,11 +104,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/projectiles/WindupCannonball.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/controls/Mouse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/cannon/BasicCannon.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/mob/Mob.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/BasicPlatform.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/graphics/Display.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/Platform.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/controls/ToolBar.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/mob/Mob.java" />
       </list>
     </option>
   </component>
@@ -692,16 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/mob/Mob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-912">
-          <caret line="90" column="21" lean-forward="false" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/platform/BasicPlatform.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -736,8 +738,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/controls/ToolBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="165" column="24" lean-forward="true" selection-start-line="165" selection-start-column="24" selection-end-line="165" selection-end-column="24" />
+        <state relative-caret-position="-504">
+          <caret line="150" column="0" lean-forward="true" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/monkeystomp/entity/mob/Mob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="206" column="8" lean-forward="false" selection-start-line="206" selection-start-column="8" selection-end-line="206" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
