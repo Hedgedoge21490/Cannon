@@ -22,7 +22,7 @@ public abstract class Platform extends Entity {
     protected int hitPoints;
     protected int hitPointsMax;
     
-    public static Platform basicPlatform = new BasicPlatform;
+    public static Platform basicPlatform = new BasicPlatform();
     
     public void damagePlatform(int damage) {
     }
